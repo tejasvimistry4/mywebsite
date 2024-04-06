@@ -1,0 +1,62 @@
+
+
+.h2, h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.h3, h3 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 10PX;
+}
+
+.titlepage {
+    margin-top: 30px; 
+  }
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.our-servics {
+    background-color: #ECEFF1;
+}
+
+img.service-img{
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    transition: opacity 0.3s, filter 0.3s; 
+
+   
+}
+
+.service-img:hover {
+    opacity: 0.8; 
+    filter: brightness(0.5);
+  }
+
+.services {
+    background-color: white;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    transition: transform 0.5s; 
+}
+
+.services.aos-init.aos-animate:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transform: scale(1.05); 
+}
+
+.service-detail {
+    margin-bottom: 20px;
+}
+
+
+
+

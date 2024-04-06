@@ -1,0 +1,191 @@
+<!-- .navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+    --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+    --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+    --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--bs-navbar-active-color);
+    color: blue;
+}
+
+.nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--bs-nav-link-color);
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    color: blue;
+    font-size: 15px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+input.form-control.me-2 {
+    margin: 20px;
+    width: 300px;
+}
+
+
+import React from 'react'
+import './Navbar.css';
+
+function Navbar() {
+  return (
+    <div>
+        <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="#">Hotel</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" aria-current="page" href="/about">About</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" aria-current="page" href="#">Rooms</a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li><a className="dropdown-item" href="#">Action</a></li>
+                    <li><a className="dropdown-item" href="#">Another action</a></li>
+                    <li><hr className="dropdown-divider"/></li>
+                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+</nav>
+    </div>
+  )
+}
+
+export default Navbar -->
+
+
+
+
+<!-- // search product
+import React, { useEffect, useState } from 'react'
+import Rooms from './Rooms'
+import './Rooms.css';
+import axios from 'axios';
+function Products() {
+
+  localStorage.setItem('productname', 'Moblie')
+
+  const [allproducts, setAllproducts] = useState([]);
+
+  const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    axios.get('https://dummyjson.com/products')
+      .then((response) => {
+        setAllproducts(response.data.products);
+        console.log(response.data.products);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+
+  }, []);
+
+
+  return (
+
+    <div className='products'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-md-12 '>
+            
+          </div>
+        </div>
+
+        <a href='/form'>click here for Service</a>
+
+        <form className="d-flex ml-auto" role="search">
+          <input className="form-control" type="search" placeholder="Search" aria-label="Search"
+            onChange={(e) => setSearch(e.target.value)} />
+          <button className="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+        <div className='row'>
+          {allproducts.filter((prodt) => {
+            return search === ''
+              ? prodt
+              : prodt.title.includes(search)
+          })
+
+          .map((prod) => (
+            <div  key={prod.id} className='col-sm-6 col-md-3  '>  
+            <div className='product'>
+                <img className='image'  alt={prod.title} src={prod.thumbnail}/>
+                <h5 className='productname'>{prod.title}</h5>                                             
+                <p className='price'>${prod.price}</p>
+                
+             
+                <button type='button' className='btn btn-primary'>View Product</button>
+
+                <button type='button' className='btn btn-secondary'>Add To Cart</button>
+
+            </div>
+            </div>
+            ))}
+          
+        </div>
+      </div>
+    </div>
+
+  )
+} -->
+
+
+
+

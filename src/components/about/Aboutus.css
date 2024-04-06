@@ -1,0 +1,72 @@
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.h2, h2 {
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.4s; 
+
+}
+
+.h2, h2:hover {
+    transform: scale(1.3); 
+}
+
+.about-us {
+    margin: 20px;
+}
+
+.about-us .about-title {
+    font-size: medium;
+}
+
+.about-title {
+    margin-bottom: 10px; 
+}
+
+  
+.about-paragraph {
+    margin-top: 35px; 
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  
+img.about-img  {
+    max-height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.4s; 
+   
+}
+
+.about-img.aos-init.aos-animate:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); 
+
+}
+
+
+button.btn.btn-dark.btn-lg {
+    margin: 30px;
+    background-color: #607D8B;
+    border: 0cap;
+    transition: transform 0.4s; 
+
+}
+
+
+button.btn.btn-dark.btn-lg:hover {
+    transform: scale(1.3); 
+
+
+}
+
+
+

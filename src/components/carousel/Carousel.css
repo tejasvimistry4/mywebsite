@@ -1,0 +1,38 @@
+
+#carouselExampleIndicators {
+    width: 100%; /* Set the width as needed */
+    max-width: 100%; /* Set a maximum width to control the size */
+    margin: 0 auto; /* Center the carousel horizontally */
+  }
+  
+.d-block {
+    display: block!important;
+    
+}
+
+.carousel-image {
+    height: 720px; 
+  }
+
+.img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+/* h1.carousel-text {
+ 
+} */
+
+
+.carousel-caption {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  font-family: cursive;
+}
+

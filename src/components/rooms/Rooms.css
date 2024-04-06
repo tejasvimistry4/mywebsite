@@ -1,0 +1,130 @@
+.h2,
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.h3,
+h3 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 10PX;
+}
+
+.titlepage {
+    margin-top: 30px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.our-rooms {
+    background-color: #FAFAFA;
+    padding-bottom: 20px;
+}
+
+img.rooms-img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+.rooms-img:hover {
+    opacity: 0.8;
+    filter: brightness(0.5);
+}
+
+.rooms {
+    background-color: white;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.2), 0 6px 20px 0 rgba(6, 6, 6, 0.19);
+
+
+}
+
+.rooms-detail {
+    padding: 20px;
+}
+
+.our-rooms .view-button {
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+.products {
+    margin: 50px;
+}
+
+
+/* products */
+
+.btn-primary {
+    margin-bottom: 10px;
+    margin: 20px;
+}
+
+
+
+.product {
+    border-radius: 10px;
+    background-color: #cfcfcf;
+    margin-bottom: 30px;
+}
+
+img.image {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.productname {
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-left: 20px;
+
+
+}
+
+p.productprice {
+    margin: 5px 0;
+    margin-right: 280px;
+}
+
+
+
+/* .productdes {
+    margin: 20px;
+} */
+
+img.d-block.ui-w-40.ui-bordered.mr-4 {
+    width: 90px;
+}
+
+
+.button-space {
+    margin: 15px;
+}
+
+
+/* sidebar */
+
+.col-md-3 {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+/* 
+div.category-sidebar {
+    background-color :   #CFD8DC !important;
+  } */
+  
